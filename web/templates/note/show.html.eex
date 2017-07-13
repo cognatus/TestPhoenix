@@ -1,0 +1,15 @@
+<%= link "To list", to: user_note_path(@conn, :index, @note.user) %>
+<h1><%= @note.course %></h1>
+<p><%= @note.note %></p>
+<%= if @current_user.id == @user.id do %>
+  <span>
+    <%= link "Edit", to: user_note_path(@conn, :edit, @current_user, 
+                     @note), class: "btn btn-primary btn-xs" %>
+    &nbsp;
+    <%= link "Delete", to: user_note_path(@conn, :delete, 
+                       @current_user, @note),
+                       method: :delete,
+                       data: [confirm: "Really?"],
+                       class: "btn btn-danger btn-xs"%>
+  </span>
+<% end %>

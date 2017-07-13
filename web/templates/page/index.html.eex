@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h2>Welcome to the Phoenix Course Administrator</h2>
+  <%= if @current_user do %>
+    <p class="lead"> Hi <%= @current_user.name %>!!!<br/> press the button my notes in the menu!!!</p>
+  <% else %>
+    <p class="lead">To start Register or Sign in</p>
+  <% end %>
+</div>
