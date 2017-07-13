@@ -1,4 +1,4 @@
-# Test
+# TestPhoenix
 
 To start your Phoenix app:
 
